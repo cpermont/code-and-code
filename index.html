@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification</title>
+</head>
+<body>
+<button id="btn">Mostrar notificacion</button>
+<script type="text/javascript" src="push.js-master/push.min.js"></script>
+<script type="text/javascript">
+var btn = document.getElementById('btn');
+btn.addEventListener('click', function(){
+	Push.create("Esta es una notificación!", {
+	    body: "Que tal se ve'?",
+	    icon: 'https://cdn3.iconfinder.com/data/icons/basic-interface/100/notification-128.png',
+	    timeout: 4000,
+	    onClick: function () {
+	    	window.location = "http://carlosperaza.16mb.com";
+	        //window.focus();
+	        this.close();
+	    }
+	});
+});
+</script>
+</body>
+</html>
